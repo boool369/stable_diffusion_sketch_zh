@@ -49,8 +49,8 @@ Stable Diffusion Sketch 是一款可以让您在 Android 平台使用 [Automatic
 - Support multiple ControlNet（支持多个 ControlNet）
 - Keep EXIF of shared content in your SD output（在 SD 输出中保留共享内容的 EXIF 信息）
 
-## Custom Modes
-Custom mode can be defined in JSON format.<br/>
+## Custom Modes（自定义模式）
+Custom mode can be defined in JSON format.（可以用JSON格式定义自定义模式）<br/>
 
 ### Examples
 1. Partial inpaint with POSE <br/>
@@ -73,12 +73,12 @@ Custom mode can be defined in JSON format.<br/>
 ### Parameters for the mode definition JSON（模式定义 JSON 的参数）:
 | Variable（变量） | txt2img | img2img | inpainting | Value                                                                                                            |
 |------------------|---------|---------|------------|------------------------------------------------------------------------------------------------------------------|
-| `type`           | M       | M       | M          | `txt2img` - Text to Image <br /> `img2img` - Image to Image <br /> `inpaint` - Inpainting                        |
+| `type`           | M       | M       | M          | `txt2img` - 文生图 <br /> `img2img` - 图生图 <br /> `inpaint` - 修复                        |
 | `steps`          | O       | O       | O          | integer from 1 to 120, default value is 40                                                                       |
 | `cfgScale`       | O       | O       | O          | decimal from 0 to 30, default value is 7.0                                                                       |
-| `model`          | O       | O       | O          | `v1Model` - Default for txt2img and img2img mode <br/> `v1Inpaint` - Default for Inpainting <br/> `sdxlBase` - Default for SDXL txt2img mode <br/> `sdxlRefiner` - Default for SDXL Refiner mode|
+| `model`          | O       | O       | O          | `v1Model` - txt2img 和 img2img 模式的默认值 <br/> `v1Inpaint` - 默认修复 <br/> `sdxlBase` - 默认SDXL文生图模型 <br/> `sdxlRefiner` - 默认的SDXL Refiner 模式|
 | `denoise`        | -       | M       | M          | decimal from 0 to 1                                                                                              |
-| `baseImage`      | -       | M       | M          | `background` - background image under your drawing <br/> `sketch` - your drawing on the background image         |
+| `baseImage`      | -       | M       | M          | `background` - 绘图下的背景图像 <br/> `sketch` - 你在背景图像上画的画         |
 | `inpaintFill`    | -       | -       | O          | `0` - fill (DEFAULT) <br/> `1` - original <br/> `2` - latent noise <br/> `3` - latent nothing                    |
 | `inpaintPartial` | -       | -       | O          | `0` - Inpainting on whole image (DEFAULT) <br/> `1` - Inpainting on "painted" area and paste on original image   |
 | `sdSize`         | O       | O       | O          | Output resolution of SD.  Default value is configured  in setting. <br/>Suggested value: 512 / 768 / 1024 / 1280 |
@@ -147,6 +147,6 @@ https://user-images.githubusercontent.com/5007252/225839650-f55a1b4b-3fa3-4181-8
    - 如果您的 Android 设备位于公共互联网上，而您的服务器位于内部网络上，您需要配置路由器的NAT/防火墙和DDNS。在这种情况下，请使用互联网 IP 和翻译的端口号作为服务器地址。
    - 您可以通过在 Android 设备的网络浏览器上使用它来测试服务器地址。如果地址有效，您将在浏览器中看到 automatic1111 的 Web 用户界面正在运行。
 4. 在应用程序中，选择SD模型、修复模型、采样器、升频器和控制网络模型。
-5. 开始绘图，让稳定扩散发挥魔力！
+5. 开始绘图，让SD发挥魔力！
 ## License
 Stable Diffusion Sketch is licensed under the [GNU General Public License v3.0](https://github.com/jordenyt/stable_diffusion_sketch/blob/main/LICENSE).
