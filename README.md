@@ -73,11 +73,11 @@ Custom mode can be defined in JSON format.（可以用JSON格式定义自定义�
 ### Parameters for the mode definition JSON（模式定义 JSON 的参数）:
 | Variable（变量） | txt2img | img2img | inpainting | Value                                                                                                            |
 |------------------|---------|---------|------------|------------------------------------------------------------------------------------------------------------------|
-| `type`           | M       | M       | M          | **模式**`txt2img` - 文生图 <br /> `img2img` - 图生图 <br /> `inpaint` - 修复                        |
-| `steps`          | O       | O       | O          | **步数**1 到 120 之间的整数，默认值为 40                                                                       |
-| `cfgScale`       | O       | O       | O          | **cfg**从 0 到 30 的十进制，默认值为 7.0                                                                      |
-| `model`          | O       | O       | O          | **默认模型** `v1Model` - txt2img 和 img2img 模式的默认模型 <br/> `v1Inpaint` - 默认修复 <br/> `sdxlBase` - 默认SDXL文生图模型 <br/> `sdxlRefiner` - 默认的SDXL Refiner 模式|
-| `denoise`        | -       | M       | M          | **重绘幅度** 从 0 到 1 的小数                                                                                              |
+| `type`           | M       | M       | M          | **模式**<br/>`txt2img` - 文生图 <br /> `img2img` - 图生图 <br /> `inpaint` - 修复                        |
+| `steps`          | O       | O       | O          | **步数**<br/>1 到 120 之间的整数，默认值为 40                                                                       |
+| `cfgScale`       | O       | O       | O          | **cfg**<br/>从 0 到 30 的十进制，默认值为 7.0                                                                      |
+| `model`          | O       | O       | O          | **默认模型<br/>** `v1Model` - txt2img 和 img2img 模式的默认模型 <br/> `v1Inpaint` - 默认修复 <br/> `sdxlBase` - 默认SDXL文生图模型 <br/> `sdxlRefiner` - 默认的SDXL Refiner 模式|
+| `denoise`        | -       | M       | M          | **重绘幅度**<br/> 从 0 到 1 的小数                                                                                              |
 | `baseImage`      | -       | M       | M          | `background` - 绘图下的背景图像 <br/> `sketch` - 你在背景图像上画的画         |
 | `inpaintFill`    | -       | -       | O          | `0` - fill (DEFAULT)（填充（默认）） <br/> `1` - original（原尺寸） <br/> `2` - latent noise（潜在噪音） <br/> `3` - latent nothing（潜在什么也没有）                    |
 | `inpaintPartial` | -       | -       | O          | `0` - Inpainting on whole image (DEFAULT) <br/> `1` - Inpainting on "painted" area and paste on original image   |
