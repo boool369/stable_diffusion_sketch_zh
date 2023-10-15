@@ -52,7 +52,7 @@ Stable Diffusion Sketch 是一款可以让您在 Android 平台使用 [Automatic
 ## Custom Modes（自定义模式）
 Custom mode can be defined in JSON format.（可以用JSON格式定义自定义模式）<br/>
 
-### Examples
+### Examples（扩展）
 1. Partial inpaint with POSE <br/>
 `{"type":"inpaint","denoise":0.75, "baseImage":"background", "inpaintFill":1, "inpaintPartial":1, "cn":[{"cnInputImage":"background", "cnModelKey":"cnPoseModel", "cnModule":"openpose_full", "cnWeight":1.0, "cnControlMode":0}], "sdSize":768}`
 2. Color fix <br/>
@@ -73,16 +73,16 @@ Custom mode can be defined in JSON format.（可以用JSON格式定义自定义�
 ### Parameters for the mode definition JSON（模式定义 JSON 的参数）:
 | Variable（变量） | txt2img | img2img | inpainting | Value                                                                                                            |
 |------------------|---------|---------|------------|------------------------------------------------------------------------------------------------------------------|
-| `type`           | M       | M       | M          | `txt2img` - 文生图 <br /> `img2img` - 图生图 <br /> `inpaint` - 修复                        |
-| `steps`          | O       | O       | O          | integer from 1 to 120, default value is 40                                                                       |
-| `cfgScale`       | O       | O       | O          | decimal from 0 to 30, default value is 7.0                                                                       |
-| `model`          | O       | O       | O          | `v1Model` - txt2img 和 img2img 模式的默认值 <br/> `v1Inpaint` - 默认修复 <br/> `sdxlBase` - 默认SDXL文生图模型 <br/> `sdxlRefiner` - 默认的SDXL Refiner 模式|
-| `denoise`        | -       | M       | M          | decimal from 0 to 1                                                                                              |
+| `type`           | M       | M       | M          | **模式**`txt2img` - 文生图 <br /> `img2img` - 图生图 <br /> `inpaint` - 修复                        |
+| `steps`          | O       | O       | O          | **步数**1 到 120 之间的整数，默认值为 40                                                                       |
+| `cfgScale`       | O       | O       | O          | **cfg**从 0 到 30 的十进制，默认值为 7.0                                                                      |
+| `model`          | O       | O       | O          | **默认模型** `v1Model` - txt2img 和 img2img 模式的默认模型 <br/> `v1Inpaint` - 默认修复 <br/> `sdxlBase` - 默认SDXL文生图模型 <br/> `sdxlRefiner` - 默认的SDXL Refiner 模式|
+| `denoise`        | -       | M       | M          | **重绘幅度** 从 0 到 1 的小数                                                                                              |
 | `baseImage`      | -       | M       | M          | `background` - 绘图下的背景图像 <br/> `sketch` - 你在背景图像上画的画         |
-| `inpaintFill`    | -       | -       | O          | `0` - fill (DEFAULT) <br/> `1` - original <br/> `2` - latent noise <br/> `3` - latent nothing                    |
+| `inpaintFill`    | -       | -       | O          | `0` - fill (DEFAULT)（填充（默认）） <br/> `1` - original（原尺寸） <br/> `2` - latent noise（潜在噪音） <br/> `3` - latent nothing（潜在什么也没有）                    |
 | `inpaintPartial` | -       | -       | O          | `0` - Inpainting on whole image (DEFAULT) <br/> `1` - Inpainting on "painted" area and paste on original image   |
-| `sdSize`         | O       | O       | O          | Output resolution of SD.  Default value is configured  in setting. <br/>Suggested value: 512 / 768 / 1024 / 1280 |
-| `cn`             | O       | O       | O          | JSON Array for ControlNet Object                                                                                 |
+| `sdSize`         | O       | O       | O          | 输出分辨率标清。默认值在设置中配置。 <br/>建议值: 512 / 768 / 1024 / 1280 |
+| `cn`             | O       | O       | O          | JSON Array for ControlNet Object（ControlNet 对象的 JSON 数组）                                                                                 |
 
 (M - Mandatory; O - Optional)
 
