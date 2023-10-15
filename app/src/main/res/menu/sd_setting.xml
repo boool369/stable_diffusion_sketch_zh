@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="SD Settings">
+    <item android:title="SD 设置">
         <menu>
-            <item android:id="@+id/mi_sd_server_address" android:title="Stable Diffusion Server Address"/>
-            <item android:id="@+id/mi_sd_output_dim" android:title="Stable Diffusion Output Dimension"/>
-            <item android:id="@+id/mi_canvas_dim" android:title="Canvas Dimension"/>
-            <item android:id="@+id/mi_steps" android:title="Default Steps" />
-            <item android:id="@+id/mi_cfg_scale" android:title="Default CFG Scale" />
-            <item android:id="@+id/mi_sd_sampler" android:title="Sampling method"/>
-            <item android:id="@+id/mi_sd_upscaler" android:title="Upscaler"/>
+            <item android:id="@+id/mi_sd_server_address" android:title="Stable Diffusion 服务器地址"/>
+            <item android:id="@+id/mi_sd_output_dim" android:title="SD输出尺寸"/>
+            <item android:id="@+id/mi_canvas_dim" android:title="画布尺寸"/>
+            <item android:id="@+id/mi_steps" android:title="默认步数" />
+            <item android:id="@+id/mi_cfg_scale" android:title="默认 CFG Scale" />
+            <item android:id="@+id/mi_sd_sampler" android:title="采样方式"/>
+            <item android:id="@+id/mi_sd_upscaler" android:title="高清修复模型"/>
         </menu>
     </item>
-    <item android:title="Prompt Settings">
+    <item android:title="提示词设置">
         <menu>
-            <item android:id="@+id/mi_prompt_prefix" android:title="Prompt prefix"/>
-            <item android:id="@+id/mi_prompt_postfix" android:title="Prompt postfix"/>
-            <item android:id="@+id/mi_negative_prompt" android:title="Negative prompt"/>
+            <item android:id="@+id/mi_prompt_prefix" android:title="提示符前缀"/>
+            <item android:id="@+id/mi_prompt_postfix" android:title="提示符前缀"/>
+            <item android:id="@+id/mi_negative_prompt" android:title="负面提示词"/>
         </menu>
     </item>
-    <item android:title="Model Settings">
+    <item android:title="模型设置">
         <menu>
-            <item android:id="@+id/mi_sd_model" android:title="Stable Diffusion model"/>
-            <item android:id="@+id/mi_sd_inpaint_model" android:title="Stable Diffusion inpaint model"/>
+            <item android:id="@+id/mi_sd_model" android:title="SD模型设置"/>
+            <item android:id="@+id/mi_sd_inpaint_model" android:title="SD修复模型"/>
             <item android:id="@+id/mi_sdxl_base_model" android:title="SDXL Base model"/>
             <item android:id="@+id/mi_sdxl_refine_model" android:title="SDXL Refiner model"/>
             <item android:id="@+id/mi_cn_scribble" android:title="ControlNet Scribble model"/>
@@ -39,20 +39,20 @@
             <item android:id="@+id/mi_cn_other3" android:title="Other ControlNet Model 3"/>
         </menu>
     </item>
-    <item android:title="Customized Mode">
+    <item android:title="定制模式">
         <menu>
-            <item android:id="@+id/mi_mode_txt2img" android:title="SD txt2img"/>
-            <item android:id="@+id/mi_mode_sdxl" android:title="SDXL txt2img"/>
+            <item android:id="@+id/mi_mode_txt2img" android:title="SD 文生图"/>
+            <item android:id="@+id/mi_mode_sdxl" android:title="SDXL 文生图"/>
             <item android:id="@+id/mi_mode_refiner" android:title="SDXL Refiner"/>
-            <item android:id="@+id/mi_mode_custom1" android:title="Custom Mode 1"/>
-            <item android:id="@+id/mi_mode_custom2" android:title="Custom Mode 2"/>
-            <item android:id="@+id/mi_mode_custom3" android:title="Custom Mode 3"/>
-            <item android:id="@+id/mi_mode_custom4" android:title="Custom Mode 4"/>
-            <item android:id="@+id/mi_mode_custom5" android:title="Custom Mode 5"/>
-            <item android:id="@+id/mi_mode_custom6" android:title="Custom Mode 6"/>
-            <item android:id="@+id/mi_mode_custom7" android:title="Custom Mode 7"/>
-            <item android:id="@+id/mi_mode_custom8" android:title="Custom Mode 8"/>
+            <item android:id="@+id/mi_mode_custom1" android:title="自定义模式 1"/>
+            <item android:id="@+id/mi_mode_custom2" android:title="自定义模式 2"/>
+            <item android:id="@+id/mi_mode_custom3" android:title="自定义模式 3"/>
+            <item android:id="@+id/mi_mode_custom4" android:title="自定义模式 4"/>
+            <item android:id="@+id/mi_mode_custom5" android:title="自定义模式 5"/>
+            <item android:id="@+id/mi_mode_custom6" android:title="自定义模式 6"/>
+            <item android:id="@+id/mi_mode_custom7" android:title="自定义模式 7"/>
+            <item android:id="@+id/mi_mode_custom8" android:title="自定义模式 8"/>
         </menu>
     </item>
-    <item android:id="@+id/mi_about" android:title="Go to Project Page" />
+    <item android:id="@+id/mi_about" android:title="前往项目页面" />
 </menu>
